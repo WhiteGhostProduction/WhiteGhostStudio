@@ -1,39 +1,78 @@
-/* Import the Poppins font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-/* ============================= */
-/* General Website Styling */
-/* ============================= */
+/* ========================================= */
+/* IMPORT GOOGLE FONTS */
+/* ========================================= */
 
-/* Apply styles to the whole webpage */
+/* Import Cinzel for headings and Outfit for body text */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+
+/* ========================================= */
+/* GENERAL WEBSITE STYLING */
+/* ========================================= */
+
 body {
 
-    margin: 0; /* Remove the browser's default margin */
+    margin: 0; /* Remove default browser spacing */
 
-    min-height: 100vh; /* Make the page fill the screen */
+    min-height: 100vh; /* Fill the full screen */
 
-    /* Create a colorful gradient background */
+    /* Premium multi-colour gradient background */
     background: linear-gradient(
         135deg,
         #0B1120, /* Dark navy */
-        #2563EB, /* Blue */
+        #2563EB, /* Royal blue */
         #7C3AED, /* Purple */
         #EC4899  /* Pink */
     );
 
-    color: white; /* Make all text white */
+    color: white; /* White text */
 
-    font-family: 'Poppins', sans-serif; /* Choose a clean font */
+    font-family: 'Outfit', sans-serif; /* Modern font for all normal text */
 }
 
-/* ============================= */
-/* Main Heading */
-/* ============================= */
+
+/* ========================================= */
+/* MAIN TITLE */
+/* ========================================= */
 
 h1 {
 
-    text-align: center; /* Center the heading */
+    text-align: center; /* Center the title */
 
-    font-size: 60px; /* Make it large */
+    font-family: 'Cinzel', serif; /* Luxury font */
 
-    margin-top: 50px; /* Add space above it */
+    font-size: 64px; /* Large title */
+
+    font-weight: 700; /* Bold */
+
+    letter-spacing: 4px; /* Spread letters for a premium look */
+
+    margin-top: 40px; /* Space above title */
+}
+
+
+/* ========================================= */
+/* SUBHEADINGS */
+/* ========================================= */
+
+h2,
+h3 {
+
+    font-family: 'Cinzel', serif; /* Same luxury font */
+
+    letter-spacing: 2px;
+}
+
+
+/* ========================================= */
+/* PARAGRAPHS & BUTTONS */
+/* ========================================= */
+
+p,
+button,
+a {
+
+    font-family: 'Outfit', sans-serif; /* Clean modern font */
+
+    font-size: 18px;
 }

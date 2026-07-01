@@ -20,9 +20,10 @@ body {
     background: linear-gradient(
         135deg,
         #0B1120, /* Dark navy */
-        #2563EB, /* Royal blue */
-        #7C3AED, /* Purple */
-        #EC4899  /* Pink */
+        #D4AF37, /* Classic gold */
+        #8B6914, /* Deep gold */
+        #000000  /* Black */
+
     );
 
     color: white; /* White text */

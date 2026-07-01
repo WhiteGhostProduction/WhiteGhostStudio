@@ -1,3 +1,5 @@
+/* Import the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 /* ============================= */
 /* General Website Styling */
 /* ============================= */
@@ -18,9 +20,9 @@ body {
         #EC4899  /* Pink */
     );
 
-    color: red; /* Make all text red */
+    color: white; /* Make all text white */
 
-    font-family: Arial, sans-serif; /* Choose a clean font */
+    font-family: 'Poppins', sans-serif; /* Choose a clean font */
 }
 
 /* ============================= */

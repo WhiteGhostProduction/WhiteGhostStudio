@@ -6,6 +6,55 @@
     <title>Studio WhiteGhost</title>
 </head>
 <body>
+    <style>
+       /* Style the main title */
+        .main-title {
+
+            text-align: center; /* Centers the text horizontally */
+
+            font-size: 48px; /* Makes the title larger */
+
+            color: white; /* Changes the text color */
+
+            margin-top: 40px; /* Adds space above the title */
+    }
+        } margin: 0; /* Remove the browser's default margin */
+
+    min-height: 100vh; /* Make the body at least the full height of the screen */
+
+    /* Create a diagonal gradient using four colors */
+    background: linear-gradient(
+        -45deg,
+        #00c6ff, /* Light blue */
+        #0072ff, /* Blue */
+        #8e2de2, /* Purple */
+        #ff0080  /* Pink */
+    );
+
+    background-size: 400% 400%; /* Make the gradient larger so it can animate */
+
+    animation: gradientBG 12s ease infinite; /* Animate the background continuously */
+}
+
+/* Define the animation called gradientBG */
+@keyframes gradientBG {
+
+    /* Starting position */
+    0% {
+        background-position: 0% 50%;
+    }
+
+    /* Middle of the animation */
+    50% {
+        background-position: 100% 50%;
+    }
+
+    /* Return to the starting position */
+    100% {
+        background-position: 0% 50%;
+    }
+}
+    </style>
     <header>
         <h1>Welcome to White Ghost Studio</h1>
     </header>

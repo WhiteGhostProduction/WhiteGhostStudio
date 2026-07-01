@@ -13,8 +13,11 @@
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    color: #111;
+    background:
+      radial-gradient(circle at top right, rgba(212, 175, 55, 0.18), transparent 35%),
+      radial-gradient(circle at bottom left, rgba(212, 175, 55, 0.12), transparent 30%),
+      #050505;
+    color: white;
   }
 
   nav {
@@ -22,18 +25,30 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background: #111;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
   }
 
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 20px;
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+  nav a:hover {
+    color: #D4AF37;
   }
 
   main {
     padding: 70px 8%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: #D4AF37;
   }
 
   h1 {
@@ -43,26 +58,36 @@
 
   main > p {
     font-size: 18px;
-    max-width: 600px;
+    max-width: 650px;
+    line-height: 1.7;
     margin-bottom: 45px;
+    color: #eeeeee;
   }
 
   section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    gap: 24px;
   }
 
   section h2 {
     grid-column: 1 / -1;
     margin-bottom: 0;
+    font-size: 30px;
   }
 
   article {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(145deg, #151515, #090909);
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s, border 0.3s;
+  }
+
+  article:hover {
+    transform: translateY(-8px);
+    border: 1px solid #D4AF37;
   }
 
   article img {
@@ -75,32 +100,98 @@
 
   article h3 {
     margin-top: 0;
-    font-size: 22px;
+    font-size: 23px;
   }
 
   article p {
+    color: #dddddd;
     line-height: 1.6;
   }
 
   article a {
     display: inline-block;
     margin-top: 12px;
-    padding: 10px 15px;
-    background: #111;
-    color: white;
+    padding: 11px 18px;
+    background: #D4AF37;
+    color: black;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+    transition: 0.3s;
   }
+
+  article a:hover {
+    background: black;
+    color: #D4AF37;
+    outline: 1px solid #D4AF37;
+  }
+  .logo {
+  color: #D4AF37;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.join-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 70px;
+}
+
+.join-card {
+  padding: 35px;
+  text-align: center;
+  background: linear-gradient(145deg, #171717, #070707);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 14px;
+}
+
+.join-card h2 {
+  margin-top: 0;
+  color: #D4AF37;
+}
+
+.join-card p {
+  color: #e6e6e6;
+  line-height: 1.6;
+}
+
+.gold-button {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 20px;
+  background: #D4AF37;
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.gold-button:hover {
+  background: black;
+  color: #D4AF37;
+  outline: 1px solid #D4AF37;
+}
 </style>
 </head>
 
 <body>
 
-  <nav>
+<nav>
+  <a class="logo" href="index.html">WhiteGhostStudio</a>
+
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="creator.html">Creators</a>
-  </nav>
+  </div>
+</nav>
 
   <main>
     <h1>Find Your Creator</h1>
@@ -123,6 +214,19 @@
   <a href="#">View Profile</a>
 </article>
     </section>
+    <section class="join-section">
+  <div class="join-card">
+    <h2>Looking for a Creator?</h2>
+    <p>Find photographers and videographers who can bring your ideas, events, and projects to life.</p>
+<a href="client-request.html" class="gold-button">Find a Creator</a>
+  </div>
+
+  <div class="join-card">
+    <h2>Are You a Creator?</h2>
+    <p>Build your profile, showcase your work, and connect with clients looking for your talent.</p>
+    <a href="creator-registration.html" class="gold-button">Join as a Creator</a>
+  </div>
+</section>
   </main>
 
 </body>

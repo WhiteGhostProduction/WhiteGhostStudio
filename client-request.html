@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find a Creator | WhiteGhostStudio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(212, 175, 55, 0.18), transparent 35%),
+        #050505;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: rgba(0, 0, 0, 0.9);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    }
+
+    .logo {
+      color: #D4AF37;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #D4AF37;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 70px 8%;
+    }
+
+    h1 {
+      color: #D4AF37;
+      font-size: 42px;
+    }
+
+    p {
+      color: #e6e6e6;
+      line-height: 1.6;
+    }
+
+    form {
+      margin-top: 35px;
+      padding: 30px;
+      background: linear-gradient(145deg, #171717, #070707);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 14px;
+    }
+
+    label {
+      display: block;
+      margin: 18px 0 8px;
+      color: #D4AF37;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      background: #111;
+      color: white;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 24px;
+      padding: 13px 22px;
+      background: #D4AF37;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: black;
+      color: #D4AF37;
+      outline: 1px solid #D4AF37;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a class="logo" href="index.html">WhiteGhostStudio</a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="creator.html">Creators</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Find the Right Creator</h1>
+    <p>Tell us what you need, and we will help connect you with photographers or videographers that fit your vision.</p>
+
+    <form>
+      <label for="name">Your Name</label>
+      <input id="name" type="text" placeholder="Enter your name" />
+
+      <label for="email">Email Address</label>
+      <input id="email" type="email" placeholder="Enter your email" />
+
+      <label for="service">What service do you need?</label>
+      <select id="service">
+        <option>Choose a service</option>
+        <option>Photography</option>
+        <option>Videography</option>
+        <option>Portrait Session</option>
+        <option>Graduation Photos</option>
+        <option>Event Coverage</option>
+        <option>Music Video</option>
+        <option>Brand Content</option>
+      </select>
+
+      <label for="details">Tell us about your project</label>
+      <textarea id="details" placeholder="Describe your idea, event, date, location, and budget if you know it."></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </main>
+</body>
+</html>

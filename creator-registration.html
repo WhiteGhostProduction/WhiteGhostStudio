@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join as a Creator | WhiteGhostStudio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(212, 175, 55, 0.18), transparent 35%),
+        #050505;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: rgba(0, 0, 0, 0.9);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    }
+
+    .logo {
+      color: #D4AF37;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #D4AF37;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 70px 8%;
+    }
+
+    h1 {
+      color: #D4AF37;
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    main > p {
+      color: #e6e6e6;
+      line-height: 1.6;
+    }
+
+    form {
+      margin-top: 35px;
+      padding: 30px;
+      background: linear-gradient(145deg, #171717, #070707);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 14px;
+    }
+
+    label {
+      display: block;
+      margin: 18px 0 8px;
+      color: #D4AF37;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      background: #111;
+      color: white;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 24px;
+      padding: 13px 22px;
+      background: #D4AF37;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: black;
+      color: #D4AF37;
+      outline: 1px solid #D4AF37;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a class="logo" href="index.html">WhiteGhostStudio</a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="creator.html">Creators</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Join WhiteGhostStudio</h1>
+    <p>Create your profile, showcase your work, and connect with clients looking for photographers and videographers.</p>
+
+    <form>
+      <label for="name">Your Name or Business Name</label>
+      <input id="name" type="text" placeholder="Enter your name or brand name" />
+
+      <label for="email">Email Address</label>
+      <input id="email" type="email" placeholder="Enter your email" />
+
+      <label for="type">What type of creator are you?</label>
+      <select id="type">
+        <option>Choose one</option>
+        <option>Photographer</option>
+        <option>Videographer</option>
+        <option>Photographer and Videographer</option>
+      </select>
+
+      <label for="specialty">Main Services</label>
+      <input id="specialty" type="text" placeholder="Example: Portraits, events, music videos, brand content" />
+
+      <label for="portfolio">Portfolio or Social Link</label>
+      <input id="portfolio" type="url" placeholder="Instagram, website, or portfolio link" />
+
+      <label for="about">Tell Clients About Your Work</label>
+      <textarea id="about" placeholder="Describe your style, experience, location, and the type of projects you enjoy."></textarea>
+
+      <button type="submit">Create My Creator Profile</button>
+    </form>
+  </main>
+</body>
+</html>

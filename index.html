@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
     <title>Studio WhiteGhost</title>
 </head>
 <header>
@@ -23,40 +24,12 @@
     }
         } margin: 0; /* Remove the browser's default margin */
 
-    min-height: 100vh; /* Make the body at least the full height of the screen */
-
-    /* Create a diagonal gradient using four colors */
-    background: linear-gradient(
-        -45deg,
-        #00c6ff, /* Light blue */
-        #0072ff, /* Blue */
-        #8e2de2, /* Purple */
-        #ff0080  /* Pink */
-    );
-
-    background-size: 400% 400%; /* Make the gradient larger so it can animate */
-
-    animation: gradientBG 12s ease infinite; /* Animate the background continuously */
+    body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #2563eb, #7c3aed, #ec4899);
 }
-
-/* Define the animation called gradientBG */
-@keyframes gradientBG {
-
-    /* Starting position */
-    0% {
-        background-position: 0% 50%;
-    }
-
-    /* Middle of the animation */
-    50% {
-        background-position: 100% 50%;
-    }
-
-    /* Return to the starting position */
-    100% {
-        background-position: 0% 50%;
-    }
-}
+    
     </style>
     <nav>
         <ul>

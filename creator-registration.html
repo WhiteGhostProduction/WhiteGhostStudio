@@ -112,6 +112,12 @@
       color: #D4AF37;
       outline: 1px solid #D4AF37;
     }
+    .success-message {
+     margin-top: 20px;
+     color: #D4AF37;
+     font-weight: bold;
+     text-align: center;
+    }
   </style>
 </head>
 
@@ -129,15 +135,15 @@
     <h1>Join WhiteGhostStudio</h1>
     <p>Create your profile, showcase your work, and connect with clients looking for photographers and videographers.</p>
 
-    <form>
+    <form id="creator-form" action="https://formspree.io/f/xjgqjadw" method="POST">
       <label for="name">Your Name or Business Name</label>
-      <input id="name" type="text" placeholder="Enter your name or brand name" />
+      <input id="name" name="creator_name" type="text" placeholder="Enter your name or brand name" required />
 
       <label for="email">Email Address</label>
-      <input id="email" type="email" placeholder="Enter your email" />
+      <input id="email" name="email" type="email" placeholder="Enter your email" required />
 
       <label for="type">What type of creator are you?</label>
-      <select id="type">
+      <select id="type" name="creator_type" required>
         <option>Choose one</option>
         <option>Photographer</option>
         <option>Videographer</option>
@@ -145,16 +151,29 @@
       </select>
 
       <label for="specialty">Main Services</label>
-      <input id="specialty" type="text" placeholder="Example: Portraits, events, music videos, brand content" />
+      <input id="specialty" name="services" type="text" placeholder="Example: Portraits, events, music videos, brand content" required />
 
       <label for="portfolio">Portfolio or Social Link</label>
-      <input id="portfolio" type="url" placeholder="Instagram, website, or portfolio link" />
+      <input id="portfolio" name="portfolio_link" type="url" placeholder="Instagram, website, or portfolio link" />
 
       <label for="about">Tell Clients About Your Work</label>
-      <textarea id="about" placeholder="Describe your style, experience, location, and the type of projects you enjoy."></textarea>
+      <textarea id="about" name="about_creator" placeholder="Describe your style, experience, location, and the type of projects you enjoy." required></textarea>
 
       <button type="submit">Create My Creator Profile</button>
     </form>
   </main>
 </body>
+<script>
+  const creatorForm = document.getElementById("creator-form");
+  const successMessage = document.getElementById("success-message");
+
+  creatorForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    successMessage.textContent =
+      "Your creator profile request has been submitted! Welcome to WhiteGhostStudio.";
+
+    creatorForm.reset();
+  });
+</script>
 </html>

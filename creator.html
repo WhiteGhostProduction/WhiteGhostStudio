@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Allows normal letters and symbols to display correctly -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab name -->
+    <title>Match With Creators | Creator Match</title>
+
+    <!-- Connects this page to your shared CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Imports the same fonts used on the home page -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Top navigation bar -->
+    <header class="navbar">
+
+        <!-- Website logo -->
+        <a href="index.html" class="logo">
+            Creator<span>Match</span>
+        </a>
+
+        <!-- Navigation links -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="creator.html">Discover</a></li>
+                <li><a href="creator-registration.html">Join Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Button for clients who want to submit a project request -->
+        <a href="client-request.html" class="nav-button">Post a Project</a>
+
+    </header>
+
+    <main class="match-page">
+
+        <!-- Intro text above the swipe card -->
+        <section class="match-intro">
+
+            <p class="eyebrow">DISCOVER YOUR NEXT CREATOR</p>
+
+            <h1>Find a creative match for your <span>vision.</span></h1>
+
+            <p>
+                Review creator profiles, check their style and services,
+                then pass or match with the talent that fits your project.
+            </p>
+
+        </section>
+
+        <!-- Main swipe-style creator profile card -->
+        <section class="swipe-area">
+
+            <article class="swipe-card">
+
+                <!-- Creator image -->
+                <div class="swipe-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1000&q=80"
+                        alt="Photographer holding a camera">
+                </div>
+
+                <!-- Creator details -->
+                <div class="swipe-card-content">
+
+                    <div class="swipe-card-top">
+
+                        <div>
+                            <h2>Jordan Lens</h2>
+                            <p class="creator-role">Photographer • Toronto</p>
+                        </div>
+
+                        <span class="verified">✓</span>
+
+                    </div>
+
+                    <p class="creator-bio">
+                        Portrait, graduation, and event photographer focused on
+                        natural moments, clean edits, and memorable storytelling.
+                    </p>
+
+                    <!-- Creator specialty tags -->
+                    <div class="profile-tags">
+                        <span>Portraits</span>
+                        <span>Graduations</span>
+                        <span>Events</span>
+                    </div>
+
+                    <!-- Starting price -->
+                    <p class="starting-price">Starting at <strong>$250</strong></p>
+
+                </div>
+
+            </article>
+
+            <!-- Swipe action buttons -->
+            <div class="match-actions">
+
+                <!-- Pass button -->
+                <button class="pass-button" type="button">✕</button>
+
+                <!-- View profile button -->
+                <a href="client-request.html" class="details-button">View Details</a>
+
+                <!-- Match button -->
+                <button class="like-button" type="button">♥</button>
+
+            </div>
+
+            <!-- Small explanation under buttons -->
+            <p class="swipe-help">
+                Tap ✕ to pass, or ♥ to show interest and start a match.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Creator Match. Built for creatives and clients.</p>
+    </footer>
+
+</body>
+</html>

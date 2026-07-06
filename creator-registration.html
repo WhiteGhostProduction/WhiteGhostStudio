@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Allows normal letters and symbols to display correctly -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab name -->
+    <title>Join as a Creator | Creator Match</title>
+
+    <!-- Connects this page to the shared CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Imports the same fonts used across the website -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <header class="navbar">
+
+        <!-- Website logo -->
+        <a href="index.html" class="logo">
+            Creator<span>Match</span>
+        </a>
+
+        <!-- Navigation links -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="creator.html">Explore Creators</a></li>
+                <li><a href="creator-registration.html">Join Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Navigation button -->
+        <a href="client-request.html" class="nav-button">Find a Creator</a>
+
+    </header>
+
+    <main class="form-page">
+
+        <!-- Intro section -->
+        <section class="form-page-intro">
+
+            <p class="eyebrow">FOR PHOTOGRAPHERS & VIDEOGRAPHERS</p>
+
+            <h1>Turn your talent into more <span>bookings.</span></h1>
+
+            <p>
+                Create your Creator Match profile so clients can discover your
+                work, style, services, and the types of projects you love to create.
+            </p>
+
+        </section>
+
+        <!-- Creator registration form -->
+        <section class="form-card">
+
+            <form id="creator-form" action="https://formspree.io/f/xjgqjadw" method="POST">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="name">Your Name or Business Name</label>
+                        <input
+                            id="name"
+                            name="creator_name"
+                            type="text"
+                            placeholder="Enter your name or brand name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="Enter your email"
+                            required>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="type">What type of creator are you?</label>
+
+                        <select id="type" name="creator_type" required>
+                            <option value="">Choose one</option>
+                            <option>Photographer</option>
+                            <option>Videographer</option>
+                            <option>Photographer and Videographer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Your Location</label>
+                        <input
+                            id="location"
+                            name="location"
+                            type="text"
+                            placeholder="Example: Toronto, ON"
+                            required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="specialty">Main Services</label>
+                    <input
+                        id="specialty"
+                        name="services"
+                        type="text"
+                        placeholder="Example: Portraits, events, music videos, brand content"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="portfolio">Portfolio or Social Link</label>
+                    <input
+                        id="portfolio"
+                        name="portfolio_link"
+                        type="url"
+                        placeholder="Instagram, website, or portfolio link">
+                </div>
+
+                <div class="form-group">
+                    <label for="about">Tell clients about your work</label>
+                    <textarea
+                        id="about"
+                        name="about_creator"
+                        placeholder="Describe your style, experience, location, and the type of projects you enjoy."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit-button">
+                    Create My Creator Profile
+                </button>
+
+                <!-- Message appears after Formspree submission -->
+                <p class="success-message" id="success-message"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Creator Match. Built for creatives and clients.</p>
+    </footer>
+
+</body>
+</html>

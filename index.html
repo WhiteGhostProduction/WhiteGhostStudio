@@ -1,50 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Sets the character type so text displays properly -->
     <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones and tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css">
-    <title>Studio WhiteGhost</title>
+
+    <!-- Name shown in the browser tab -->
+    <title>Creator Match</title>
+
+    <!-- Connects your HTML page to the styles.css file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Imports clean and premium-looking Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<header>
-    <h1 class="main-title">Welcome to White Ghost Studio</h1>
-</header>
+
 <body>
-    <style>
-       /* Style the main title */
-        .main-title {
 
-            text-align: center; /* Centers the text horizontally */
+    <!-- Top navigation area -->
+    <header class="navbar">
 
-            font-size: 48px; /* Makes the title larger */
+        <!-- Website logo -->
+        <a href="index.html" class="logo">
+            Creator<span>Match</span>
+        </a>
 
-            color: black; /* Changes the text color */
+        <!-- Navigation links -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#creators">Explore Creators</a></li>
+                <li><a href="#join">Join Us</a></li>
+            </ul>
+        </nav>
 
-            margin-top: 40px; /* Adds space above the title */
-    }
-        } margin: 0; /* Remove the browser's default margin */
+        <!-- Main call-to-action button in the navigation -->
+        <a href="#join" class="nav-button">Get Started</a>
 
-    body {
-    margin: 0;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #0B1120, #D4AF37, #8B6914, #000000);
-}
-    
-    </style>
-    <nav>
-        <ul>
-             <li><a href="index.html">Home</a></li>
-             <li><a href="design.html">Join as a Client</a></li>
-             <li><a href="results.html">Join as a Creator(Photography and/or Videography)</a></li>
-             <li><a href="contact.html">About Us</a></li>
-        </ul>
-    </nav>
-  </main>
+    </header>
 
-    </section>
+    <main>
 
+        <!-- Main introduction section -->
+        <section class="hero">
+
+            <!-- Left side: main website message -->
+            <div class="hero-content">
+
+                <p class="eyebrow">THE CREATIVE CONNECTION</p>
+
+                <h1>
+                    Find the creator<br>
+                    behind your <span>vision.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Creator Match connects clients with talented photographers and
+                    videographers who can bring their ideas, events, brands, and
+                    memories to life.
+                </p>
+
+                <!-- Buttons for clients and creators -->
+                <div class="hero-buttons">
+                    <a href="#creator.html" class="primary-button">Find a Creator</a>
+                    <a href="creator-registration.html" class="secondary-button">I’m a Creator</a>
+                </div>
+
+                <!-- Platform statistics -->
+                <div class="stats">
+
+                    <div class="stat-box">
+                        <h3>500+</h3>
+                        <p>Creative Talent</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3>1K+</h3>
+                        <p>Projects Matched</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3>24/7</h3>
+                        <p>Easy Discovery</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right side: example creator profile card -->
+            <div class="hero-card">
+
+                <!-- Placeholder creator image -->
+                <div class="profile-image">
+                    <p>CREATOR<br>PHOTO</p>
+                </div>
+
+                <!-- Creator name and verification symbol -->
+                <div class="profile-info">
+
+                    <div>
+                        <h2>Jordan Williams</h2>
+                        <p>Portrait & Event Photographer</p>
+                    </div>
+
+                    <span class="verified">✓</span>
+
+                </div>
+
+                <!-- Creator specialties -->
+                <div class="profile-tags">
+                    <span>Portraits</span>
+                    <span>Events</span>
+                    <span>Toronto</span>
+                </div>
+
+                <!-- Future matching button -->
+                <a href="client-request.html" class="match-button">Match With Creator</a>
+
+            </div>
+
+        </section>
+
+        <!-- Explains the matching process -->
+        <section class="how-it-works" id="how-it-works">
+
+            <p class="eyebrow">SIMPLE. FAST. CREATIVE.</p>
+
+            <h2>Built to make finding talent easier.</h2>
+
+            <div class="steps">
+
+                <!-- Step one -->
+                <article class="step-card">
+                    <span>01</span>
+                    <h3>Tell us what you need</h3>
+                    <p>
+                        Choose the type of shoot, location, budget, and creative
+                        style you are looking for.
+                    </p>
+                </article>
+
+                <!-- Step two -->
+                <article class="step-card">
+                    <span>02</span>
+                    <h3>Discover your match</h3>
+                    <p>
+                        Browse creator profiles and find photographers or
+                        videographers that fit your vision.
+                    </p>
+                </article>
+
+                <!-- Step three -->
+                <article class="step-card">
+                    <span>03</span>
+                    <h3>Book with confidence</h3>
+                    <p>
+                        Connect with creators, discuss your project, and bring
+                        your next idea to life.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Section aimed at clients -->
+        <section class="creator-section" id="creators">
+
+            <div>
+                <p class="eyebrow">FOR CLIENTS</p>
+
+                <h2>Your next shoot starts with the right match.</h2>
+
+                <p>
+                    Whether you are planning a birthday, graduation shoot, music
+                    video, wedding, brand campaign, or social-media content,
+                    Creator Match helps you find talent that fits your style.
+                </p>
+            </div>
+
+            <a href="creator.html" class="primary-button">Explore Creators</a>
+
+        </section>
+
+        <!-- Section aimed at photographers and videographers -->
+        <section class="join-section" id="join">
+
+            <p class="eyebrow">FOR CREATORS</p>
+
+            <h2>Turn your talent into more bookings.</h2>
+
+            <p>
+                Build your profile, showcase your work, and connect with clients
+                looking for your exact creative style.
+            </p>
+
+            <!-- This can later link to a creator sign-up page -->
+            <a href="creator-registration.html" class="primary-button">Join Creator Match</a>
+
+        </section>
+
+    </main>
+
+    <!-- Bottom area of the website -->
     <footer>
-        <p>&copy; 2026 White Ghost Studio, Inc. All rights reserved</p>
+        <p>&copy; 2026 Creator Match. Built for creatives and clients.</p>
     </footer>
+
 </body>
 </html>

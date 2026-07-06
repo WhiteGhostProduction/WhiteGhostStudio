@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Allows normal letters and symbols to display correctly -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab name -->
+    <title>Find a Creator | Creator Match</title>
+
+    <!-- Connects this page to the shared CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Imports the same fonts used across the website -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <header class="navbar">
+
+        <!-- Website logo -->
+        <a href="index.html" class="logo">
+            Creator<span>Match</span>
+        </a>
+
+        <!-- Navigation links -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="creator.html">Explore Creators</a></li>
+                <li><a href="creator-registration.html">Join Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Navigation button -->
+        <a href="creator.html" class="nav-button">Browse Creators</a>
+
+    </header>
+
+    <main class="form-page">
+
+        <!-- Intro section -->
+        <section class="form-page-intro">
+
+            <p class="eyebrow">FOR CLIENTS</p>
+
+            <h1>Tell us what you want to <span>create.</span></h1>
+
+            <p>
+                Share a few details about your project and Creator Match can help
+                connect you with photographers or videographers who fit your vision.
+            </p>
+
+        </section>
+
+        <!-- Client request form -->
+        <section class="form-card">
+
+            <form id="request-form" action="https://formspree.io/f/mnjklgyp" method="POST">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            placeholder="Enter your name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="Enter your email"
+                            required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="service">What type of creator do you need?</label>
+
+                    <select id="service" name="service" required>
+                        <option value="">Choose a service</option>
+                        <option>Photography</option>
+                        <option>Videography</option>
+                        <option>Photography and Videography</option>
+                        <option>Portrait Session</option>
+                        <option>Graduation Photos</option>
+                        <option>Event Coverage</option>
+                        <option>Music Video</option>
+                        <option>Brand Content</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input
+                            id="location"
+                            name="location"
+                            type="text"
+                            placeholder="Example: Toronto, ON">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Estimated Budget</label>
+
+                        <select id="budget" name="budget">
+                            <option value="">Choose a budget range</option>
+                            <option>Under $200</option>
+                            <option>$200 - $500</option>
+                            <option>$500 - $1,000</option>
+                            <option>$1,000+</option>
+                            <option>Not sure yet</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Tell us about your project</label>
+
+                    <textarea
+                        id="details"
+                        name="details"
+                        placeholder="Describe your idea, preferred date, event type, style, and anything else the creator should know."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit-button">
+                    Submit My Request
+                </button>
+
+                <!-- Success message shows after form submission -->
+                <p class="success-message" id="success-message"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Creator Match. Built for creatives and clients.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,79 +1,993 @@
-/* ========================================= */
-/* IMPORT GOOGLE FONTS */
-/* ========================================= */
+/* Removes default spacing from every element */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Import Cinzel for headings and Outfit for body text */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+/* Makes section links scroll smoothly */
+html {
+    scroll-behavior: smooth;
+}
 
-
-/* ========================================= */
-/* GENERAL WEBSITE STYLING */
-/* ========================================= */
-
+/* Main website styling */
 body {
-
-    margin: 0; /* Remove default browser spacing */
-
-    min-height: 100vh; /* Fill the full screen */
-
-    /* Premium multi-colour gradient background */
-    background: linear-gradient(
-        135deg,
-        #0B1120, /* Dark navy */
-        #D4AF37, /* Classic gold */
-        #8B6914, /* Deep gold */
-        #000000  /* Black */
-
-    );
-
-    color: white; /* White text */
-
-    font-family: 'Outfit', sans-serif; /* Modern font for all normal text */
+    background-color: #080808;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
 }
 
-
-/* ========================================= */
-/* MAIN TITLE */
-/* ========================================= */
-
-h1 {
-
-    text-align: center; /* Center the title */
-
-    font-family: 'Cinzel', serif; /* Luxury font */
-
-    font-size: 64px; /* Large title */
-
-    font-weight: 700; /* Bold */
-
-    letter-spacing: 4px; /* Spread letters for a premium look */
-
-    margin-top: 40px; /* Space above title */
+/* Top navigation bar */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(8, 8, 8, 0.95);
+    backdrop-filter: blur(10px);
 }
 
+/* Website logo */
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Playfair Display", serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
 
-/* ========================================= */
-/* SUBHEADINGS */
-/* ========================================= */
+/* Makes the word Match gold */
+.logo span {
+    color: #d4af37;
+}
 
-h2,
-h3 {
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
 
-    font-family: 'Cinzel', serif; /* Same luxury font */
+/* Navigation link styling */
+.nav-links a {
+    color: #d8d8d8;
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: 0.3s;
+}
 
+/* Navigation link hover effect */
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+/* Gold navigation and main buttons */
+.nav-button,
+.primary-button {
+    background-color: #d4af37;
+    color: #080808;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+/* Gold button hover effect */
+.nav-button:hover,
+.primary-button:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Main home page section */
+.hero {
+    min-height: 88vh;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 70px;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.22), transparent 30%),
+        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.10), transparent 28%);
+}
+
+/* Small gold headings */
+.eyebrow {
+    color: #d4af37;
     letter-spacing: 2px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 16px;
 }
 
+/* Main title */
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(3rem, 6vw, 5.7rem);
+    line-height: 1.05;
+    margin-bottom: 24px;
+}
 
-/* ========================================= */
-/* PARAGRAPHS & BUTTONS */
-/* ========================================= */
+/* Makes highlighted hero word gold */
+.hero h1 span {
+    color: #d4af37;
+}
 
-p,
-button,
-a {
+/* Main hero paragraph */
+.hero-text {
+    color: #c9c9c9;
+    max-width: 620px;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
 
-    font-family: 'Outfit', sans-serif; /* Clean modern font */
+/* Holds the two hero buttons */
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
 
-    font-size: 18px;
+/* Outline button */
+.secondary-button {
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+/* Outline button hover effect */
+.secondary-button:hover {
+    background-color: #d4af37;
+    color: #080808;
+}
+
+/* Statistics row */
+.stats {
+    display: flex;
+    gap: 35px;
+    margin-top: 55px;
+    flex-wrap: wrap;
+}
+
+/* Statistic number */
+.stat-box h3 {
+    color: #d4af37;
+    font-size: 1.6rem;
+}
+
+/* Statistic description */
+.stat-box p {
+    color: #aaaaaa;
+    font-size: 0.82rem;
+}
+
+/* Example creator profile card */
+.hero-card {
+    background-color: #161616;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: rotate(2deg);
+}
+
+/* Example profile image */
+.profile-image {
+    height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #d4af37;
+    letter-spacing: 4px;
+    font-weight: 700;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.65)),
+        url("https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Creator name and verified badge */
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 24px 12px;
+}
+
+/* Creator name */
+.profile-info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/* Creator specialty */
+.profile-info p {
+    color: #ababab;
+    font-size: 0.82rem;
+}
+
+/* Gold verified badge */
+.verified {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d4af37;
+    color: #080808;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+/* Creator profile tags */
+.profile-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 24px 20px;
+}
+
+/* Individual creator tag */
+.profile-tags span {
+    border: 1px solid #444444;
+    color: #d0d0d0;
+    font-size: 0.75rem;
+    padding: 7px 11px;
+    border-radius: 20px;
+}
+
+/* Match button inside creator card */
+.match-button {
+    width: calc(100% - 48px);
+    margin: 0 24px 24px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #d4af37;
+    color: #080808;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Match button hover */
+.match-button:hover {
+    background-color: #ffffff;
+}
+
+/* Main spacing for lower sections */
+.how-it-works,
+.join-section {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+/* Lower section headings */
+.how-it-works h2,
+.join-section h2,
+.creator-section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    margin-bottom: 20px;
+}
+
+/* Three-step layout */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 55px;
+    text-align: left;
+}
+
+/* Individual step cards */
+.step-card {
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 14px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+/* Step card hover */
+.step-card:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
+}
+
+/* Step number */
+.step-card span {
+    color: #d4af37;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Step heading */
+.step-card h3 {
+    margin: 20px 0 12px;
+    font-size: 1.2rem;
+}
+
+/* Paragraph styling */
+.step-card p,
+.creator-section p,
+.join-section p {
+    color: #b9b9b9;
+    line-height: 1.7;
+}
+
+/* Client call-to-action section */
+.creator-section {
+    margin: 0 8%;
+    padding: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #1a170c, #121212);
+    border: 1px solid rgba(212, 175, 55, 0.28);
+}
+
+/* Client section paragraph width */
+.creator-section p {
+    max-width: 680px;
+}
+
+/* Creator sign-up section width */
+.join-section {
+    max-width: 850px;
+    margin: auto;
+}
+
+/* Creator sign-up paragraph */
+.join-section p {
+    max-width: 620px;
+    margin: 0 auto 30px;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #202020;
+    padding: 30px 8%;
+    text-align: center;
+    color: #8d8d8d;
+    font-size: 0.82rem;
+}
+
+/* Tablet styling */
+@media (max-width: 900px) {
+    .navbar {
+        padding: 20px 6%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 70px 8%;
+    }
+
+    .hero-card {
+        max-width: 460px;
+        width: 100%;
+        margin: auto;
+        transform: none;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .creator-section {
+        margin: 0 6%;
+        padding: 45px 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Phone styling */
+@media (max-width: 500px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .nav-button {
+        padding: 10px 14px;
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        padding: 60px 7%;
+    }
+
+    .stats {
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 3.1rem;
+    }
+}
+/* =========================================
+   CREATOR BROWSING PAGE
+   ========================================= */
+
+/* Top section of the creator browsing page */
+.creator-page-hero {
+    padding: 100px 8% 45px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.18), transparent 45%),
+        #080808;
+}
+
+/* Main heading on creator page */
+.creator-page-hero h1 {
+    max-width: 850px;
+    margin: 0 auto 20px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    line-height: 1.1;
+}
+
+/* Gold word in the creator page heading */
+.creator-page-hero h1 span {
+    color: #d4af37;
+}
+
+/* Intro paragraph on creator page */
+.creator-page-hero > p:last-child {
+    max-width: 680px;
+    margin: auto;
+    color: #b9b9b9;
+    line-height: 1.8;
+}
+
+/* Holds the category filter buttons */
+.creator-filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 30px 8% 55px;
+}
+
+/* Category filter button */
+.filter-button {
+    padding: 10px 16px;
+    border: 1px solid #3d3d3d;
+    border-radius: 25px;
+    background-color: #141414;
+    color: #d8d8d8;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Filter button hover */
+.filter-button:hover {
+    border-color: #d4af37;
+    color: #d4af37;
+}
+
+/* Selected filter style */
+.active-filter {
+    background-color: #d4af37;
+    border-color: #d4af37;
+    color: #080808;
+}
+
+/* Holds all creator profile cards */
+.creator-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    padding: 0 8% 100px;
+}
+
+/* Individual creator profile card */
+.creator-card {
+    overflow: hidden;
+    border: 1px solid #282828;
+    border-radius: 16px;
+    background-color: #141414;
+    transition: 0.3s;
+}
+
+/* Creator card hover effect */
+.creator-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 175, 55, 0.8);
+}
+
+/* Creator profile photo */
+.creator-card img {
+    width: 100%;
+    height: 260px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Spacing inside a profile card */
+.creator-card-content {
+    padding: 24px;
+}
+
+/* Creator name and verified badge row */
+.creator-card-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+/* Creator name */
+.creator-card-heading h2 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+/* Creator job title */
+.creator-card-heading p {
+    color: #d4af37;
+    font-size: 0.82rem;
+}
+
+/* Creator description text */
+.creator-description {
+    min-height: 76px;
+    color: #b9b9b9;
+    line-height: 1.7;
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+}
+
+/* Booking button inside a creator card */
+.creator-card .primary-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Bottom call-to-action area */
+.browse-cta {
+    margin: 0 8% 100px;
+    padding: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    border-radius: 18px;
+    background: linear-gradient(135deg, #1a170c, #121212);
+}
+
+/* Bottom CTA heading */
+.browse-cta h2 {
+    margin-bottom: 14px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+}
+
+/* Bottom CTA paragraph */
+.browse-cta p:not(.eyebrow) {
+    max-width: 650px;
+    color: #b9b9b9;
+    line-height: 1.7;
+}
+
+/* Tablet styling for creator page */
+@media (max-width: 900px) {
+    .creator-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .browse-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Phone styling for creator page */
+@media (max-width: 600px) {
+    .creator-page-hero {
+        padding: 75px 7% 35px;
+    }
+
+    .creator-grid {
+        grid-template-columns: 1fr;
+        padding: 0 7% 70px;
+    }
+
+    .browse-cta {
+        margin: 0 7% 70px;
+        padding: 35px 25px;
+    }
+}
+/* =========================================
+   CLIENT REQUEST FORM PAGE
+   ========================================= */
+
+/* Main spacing around client form page */
+.form-page {
+    min-height: 85vh;
+    padding: 85px 8% 100px;
+    background:
+        radial-gradient(circle at 80% 10%, rgba(212, 175, 55, 0.18), transparent 28%),
+        radial-gradient(circle at 10% 80%, rgba(212, 175, 55, 0.10), transparent 24%);
+}
+
+/* Top intro text for form pages */
+.form-page-intro {
+    max-width: 760px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+/* Main page heading */
+.form-page-intro h1 {
+    margin-bottom: 18px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    line-height: 1.1;
+}
+
+/* Makes highlighted word gold */
+.form-page-intro h1 span {
+    color: #d4af37;
+}
+
+/* Intro paragraph */
+.form-page-intro > p:last-child {
+    max-width: 640px;
+    margin: auto;
+    color: #b9b9b9;
+    line-height: 1.8;
+}
+
+/* Main form container */
+.form-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 38px;
+    border: 1px solid rgba(212, 175, 55, 0.32);
+    border-radius: 18px;
+    background: linear-gradient(145deg, #171717, #0b0b0b);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Two fields beside each other */
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Spacing for each input area */
+.form-group {
+    margin-bottom: 22px;
+}
+
+/* Form label */
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #d4af37;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Inputs, dropdowns, and text area */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #393939;
+    border-radius: 8px;
+    outline: none;
+    background-color: #101010;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.92rem;
+    transition: 0.3s;
+}
+
+/* Placeholder text color */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #7e7e7e;
+}
+
+/* Gold border while typing */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #d4af37;
+}
+
+/* Project description field */
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Submit button */
+.form-submit-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #d4af37;
+    color: #080808;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Submit button hover */
+.form-submit-button:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Form message */
+.success-message {
+    min-height: 24px;
+    margin-top: 18px;
+    color: #d4af37;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Phone layout */
+@media (max-width: 650px) {
+    .form-page {
+        padding: 70px 7%;
+    }
+
+    .form-card {
+        padding: 28px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+/* =========================================
+   SWIPE-STYLE CREATOR MATCH PAGE
+   ========================================= */
+
+/* Main spacing around swipe page */
+.match-page {
+    min-height: 88vh;
+    padding: 75px 8% 90px;
+    background:
+        radial-gradient(circle at 80% 15%, rgba(212, 175, 55, 0.18), transparent 28%),
+        radial-gradient(circle at 20% 70%, rgba(212, 175, 55, 0.10), transparent 26%);
+}
+
+/* Intro text above the swipe card */
+.match-intro {
+    max-width: 760px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+/* Main heading */
+.match-intro h1 {
+    margin-bottom: 18px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    line-height: 1.1;
+}
+
+/* Makes vision gold */
+.match-intro h1 span {
+    color: #d4af37;
+}
+
+/* Intro paragraph */
+.match-intro > p:last-child {
+    max-width: 650px;
+    margin: auto;
+    color: #b9b9b9;
+    line-height: 1.8;
+}
+
+/* Centers the swipe card and actions */
+.swipe-area {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Main profile card */
+.swipe-card {
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 20px;
+    background: #151515;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* Creator image area */
+.swipe-image {
+    height: 360px;
+    overflow: hidden;
+}
+
+/* Creator image */
+.swipe-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Creator information section */
+.swipe-card-content {
+    padding: 26px;
+}
+
+/* Top row inside card */
+.swipe-card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+/* Creator name */
+.swipe-card-top h2 {
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+}
+
+/* Creator title and location */
+.creator-role {
+    color: #d4af37;
+    font-size: 0.9rem;
+}
+
+/* Creator bio */
+.creator-bio {
+    color: #c4c4c4;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+/* Starting price text */
+.starting-price {
+    margin-top: 20px;
+    color: #c9c9c9;
+    font-size: 0.92rem;
+}
+
+/* Gold price */
+.starting-price strong {
+    color: #d4af37;
+    font-size: 1.1rem;
+}
+
+/* Area holding pass, details, and match buttons */
+.match-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 26px;
+}
+
+/* Pass and match round buttons */
+.pass-button,
+.like-button {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 1px solid #444444;
+    background: #161616;
+    font-size: 1.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Pass button color */
+.pass-button {
+    color: #ff7b7b;
+}
+
+/* Match button color */
+.like-button {
+    color: #d4af37;
+    border-color: rgba(212, 175, 55, 0.7);
+}
+
+/* Hover effect for pass button */
+.pass-button:hover {
+    border-color: #ff7b7b;
+    transform: translateY(-4px);
+}
+
+/* Hover effect for match button */
+.like-button:hover {
+    background: #d4af37;
+    color: #080808;
+    transform: translateY(-4px);
+}
+
+/* Middle details button */
+.details-button {
+    padding: 14px 18px;
+    border: 1px solid rgba(212, 175, 55, 0.7);
+    border-radius: 8px;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+/* Details button hover */
+.details-button:hover {
+    background: #d4af37;
+    color: #080808;
+}
+
+/* Help text under action buttons */
+.swipe-help {
+    margin-top: 18px;
+    color: #999999;
+    text-align: center;
+    font-size: 0.82rem;
+}
+
+/* Phone layout */
+@media (max-width: 600px) {
+    .match-page {
+        padding: 65px 7% 75px;
+    }
+
+    .swipe-image {
+        height: 300px;
+    }
+
+    .swipe-card-content {
+        padding: 22px;
+    }
+
+    .match-actions {
+        gap: 12px;
+    }
+
+    .pass-button,
+    .like-button {
+        width: 56px;
+        height: 56px;
+    }
 }

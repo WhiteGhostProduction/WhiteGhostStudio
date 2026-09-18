@@ -1,233 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Creators | WhiteGhostStudio</title>
-  https://chatgpt.com/g/g-p-69c4a6169bf8819199943f41af51d69a-tm-products/c/6a4445af-8e0c-83ea-9842-1e10c7ba861b
-<style>
-  * {
-    box-sizing: border-box;
-  }
+    <!-- Allows normal letters and symbols to display correctly -->
+    <meta charset="UTF-8">
 
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background:
-      radial-gradient(circle at top right, rgba(212, 175, 55, 0.18), transparent 35%),
-      radial-gradient(circle at bottom left, rgba(212, 175, 55, 0.12), transparent 30%),
-      #050505;
-    color: white;
-  }
+    <!-- Makes the page responsive on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background: rgba(0, 0, 0, 0.9);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
-  }
+    <!-- Browser tab name -->
+    <title>Match With Creators | Creator Match</title>
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  margin-left: 20px;
-  transition: 0.3s;
-}
+    <!-- Connects this page to your shared CSS file -->
+    <link rel="stylesheet" href="styles.css">
 
-  nav a:hover {
-    color: #D4AF37;
-  }
+    <!-- Imports the same fonts used on the home page -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  main {
-    padding: 70px 8%;
-  }
-
-  h1,
-  h2,
-  h3 {
-    color: #D4AF37;
-  }
-
-  h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-
-  main > p {
-    font-size: 18px;
-    max-width: 650px;
-    line-height: 1.7;
-    margin-bottom: 45px;
-    color: #eeeeee;
-  }
-
-  section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px;
-  }
-
-  section h2 {
-    grid-column: 1 / -1;
-    margin-bottom: 0;
-    font-size: 30px;
-  }
-
-  article {
-    background: linear-gradient(145deg, #151515, #090909);
-    padding: 22px;
-    border-radius: 14px;
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-    transition: transform 0.3s, border 0.3s;
-  }
-
-  article:hover {
-    transform: translateY(-8px);
-    border: 1px solid #D4AF37;
-  }
-
-  article img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 18px;
-  }
-
-  article h3 {
-    margin-top: 0;
-    font-size: 23px;
-  }
-
-  article p {
-    color: #dddddd;
-    line-height: 1.6;
-  }
-
-  article a {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 11px 18px;
-    background: #D4AF37;
-    color: black;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-
-  article a:hover {
-    background: black;
-    color: #D4AF37;
-    outline: 1px solid #D4AF37;
-  }
-  .logo {
-  color: #D4AF37;
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-.join-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 70px;
-}
-
-.join-card {
-  padding: 35px;
-  text-align: center;
-  background: linear-gradient(145deg, #171717, #070707);
-  border: 1px solid rgba(212, 175, 55, 0.45);
-  border-radius: 14px;
-}
-
-.join-card h2 {
-  margin-top: 0;
-  color: #D4AF37;
-}
-
-.join-card p {
-  color: #e6e6e6;
-  line-height: 1.6;
-}
-
-.gold-button {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 12px 20px;
-  background: #D4AF37;
-  color: black;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.gold-button:hover {
-  background: black;
-  color: #D4AF37;
-  outline: 1px solid #D4AF37;
-}
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<nav>
-  <a class="logo" href="index.html">WhiteGhostStudio</a>
+    <!-- Top navigation bar -->
+    <header class="navbar">
 
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="creator.html">Creators</a>
-  </div>
-</nav>
+        <!-- Website logo -->
+        <a href="index.html" class="logo">
+            Creator<span>Match</span>
+        </a>
 
-  <main>
-    <h1>Find Your Creator</h1>
-    <p>Connect with photographers and videographers who can bring your vision to life.</p>
+        <!-- Navigation links -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="creator.html">Discover</a></li>
+                <li><a href="creator-registration.html">Join Us</a></li>
+            </ul>
+        </nav>
 
-    <section>
-      <h2>Featured Creators</h2>
+        <!-- Button for clients who want to submit a project request -->
+        <a href="client-request.html" class="nav-button">Post a Project</a>
 
-<article>
-    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80" alt="Photographer holding a camera">
-  <h3>Jordan Lens</h3>
-  <p>Photographer • Portraits • Graduations</p>
-  <a href="#">View Profile</a>
-</article>
+    </header>
 
-<article>
-    <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=800&q=80" alt="Videographer working with a camera">
-  <h3>Kay Visuals</h3>
-  <p>Videographer • Music Videos • Brand Content</p>
-  <a href="#">View Profile</a>
-</article>
-    </section>
-    <section class="join-section">
-  <div class="join-card">
-    <h2>Looking for a Creator?</h2>
-    <p>Find photographers and videographers who can bring your ideas, events, and projects to life.</p>
-<a href="client-request.html" class="gold-button">Find a Creator</a>
-  </div>
+    <main class="match-page">
 
-  <div class="join-card">
-    <h2>Are You a Creator?</h2>
-    <p>Build your profile, showcase your work, and connect with clients looking for your talent.</p>
-    <a href="creator-registration.html" class="gold-button">Join as a Creator</a>
-  </div>
-</section>
-  </main>
+        <!-- Intro text above the swipe card -->
+        <section class="match-intro">
+
+            <p class="eyebrow">DISCOVER YOUR NEXT CREATOR</p>
+
+            <h1>Find a creative match for your <span>vision.</span></h1>
+
+            <p>
+                Review creator profiles, check their style and services,
+                then pass or match with the talent that fits your project.
+            </p>
+
+        </section>
+
+        <!-- Main swipe-style creator profile card -->
+        <section class="swipe-area">
+
+            <article class="swipe-card">
+
+                <!-- Creator image -->
+                <div class="swipe-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1000&q=80"
+                        alt="Photographer holding a camera">
+                </div>
+
+                <!-- Creator details -->
+                <div class="swipe-card-content">
+
+                    <div class="swipe-card-top">
+
+                        <div>
+                            <h2>Jordan Lens</h2>
+                            <p class="creator-role">Photographer • Toronto</p>
+                        </div>
+
+                        <span class="verified">✓</span>
+
+                    </div>
+
+                    <p class="creator-bio">
+                        Portrait, graduation, and event photographer focused on
+                        natural moments, clean edits, and memorable storytelling.
+                    </p>
+
+                    <!-- Creator specialty tags -->
+                    <div class="profile-tags">
+                        <span>Portraits</span>
+                        <span>Graduations</span>
+                        <span>Events</span>
+                    </div>
+
+                    <!-- Starting price -->
+                    <p class="starting-price">Starting at <strong>$250</strong></p>
+
+                </div>
+
+            </article>
+
+            <!-- Swipe action buttons -->
+            <div class="match-actions">
+
+                <!-- Pass button -->
+                <button class="pass-button" type="button">✕</button>
+
+                <!-- View profile button -->
+                <a href="client-request.html" class="details-button">View Details</a>
+
+                <!-- Match button -->
+                <button class="like-button" type="button">♥</button>
+
+            </div>
+
+            <!-- Small explanation under buttons -->
+            <p class="swipe-help">
+                Tap ✕ to pass, or ♥ to show interest and start a match.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Creator Match. Built for creatives and clients.</p>
+    </footer>
 
 </body>
 </html>
